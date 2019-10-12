@@ -1,0 +1,22 @@
+body.bod1
+ form( method="get")
+   div.header
+    div
+      img(height='60px'
+       src='logont.png' )
+      p.titulo #{params.par1.titulo}
+      ul.meno1
+       li.meno1(id='m1') #{params.par1.meno1}
+        div.dropdown-content
+         a(href='/admin/langreload') #{params.par1.meno21}
+       li.meno1(id='m2')
+        a.meno1(href='opcion1') #{params.par1.meno2}
+       li.meno1(id='m3')
+        a.meno1(href='opcion1') #{params.par1.meno3}
+       li.meno1(id='m4')
+        a.meno1(href='opcion4') #{params.par1.meno4}
+
+       li.meno1(id='lenguaje') #{params.par1.idioma}
+          div.dropdown-content
+           each item in params.par2
+            a(href= '/'+item.lang) #{item.langtxt}
